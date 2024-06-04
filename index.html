@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Random Geometry Cube</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div class="controllers_container">
+        <div class="controllers_inputs">
+            <div class="controllers_input">
+                <label for="xAxios">X</label>
+                <input
+                    id='xAxios'
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="10"
+                >
+            </div>
+            <div class="controllers_input">
+                <label for="yAxios">Y</label>
+                <input
+                    id='yAxios'
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="10"
+                >
+            </div>
+            <div class="controllers_input">
+                <label for="axiosZ">Z</label>
+                <input
+                    id='axiosZ'
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="10"
+                >
+            </div>
+        </div>
+
+        <button id='shapeGenerator'>Generate</button>
+
+        <button id="explodeButton">Explode</button>
+    </div>
+    <canvas class="webgl"></canvas>
+    <script type="module" src="./src/script.js"></script>
+</body>
+</html>

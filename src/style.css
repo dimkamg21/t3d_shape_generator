@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.controllers_container {
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(163, 163, 163);
+  margin: 2px;
+  padding: 5px 5px 5px;
+}
+
+.controllers_inputs {
+  display: flex;
+}
+
+.controllers_input {
+  margin-left: 5px;
+}
+
+.controllers_input  input {
+  margin-left: 5px;
+  padding-left: 5px;
+  width: 30px;
+}
+
+.controllers_input label {
+  display: inline-block;
+  width: 10px;
+}
+
+.controllers_container button {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px;
+  margin-left: 25px;
+  margin-top: 5px;
+}
