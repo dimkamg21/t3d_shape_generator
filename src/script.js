@@ -29,10 +29,10 @@ manager.onError = function (url) {
  */
 const textureLoader = new THREE.TextureLoader(manager);
 const textures = [
-    textureLoader.load('/textures/fire.jpg'),
-    textureLoader.load('/textures/grass.jpg'),
-    textureLoader.load('/textures/sand.avif'),
-    textureLoader.load('/textures/water.avif')
+    textureLoader.load('/textures/fire.webp'),
+    textureLoader.load('/textures/grass.webp'),
+    textureLoader.load('/textures/sand.webp'),
+    textureLoader.load('/textures/water.webp')
 ];
 
 const shapeGeometry = generateRandomGeometry();
@@ -122,7 +122,7 @@ function generateShape() {
     const shapeSize = getInputValues();
     meshes = [];
 
-    for (let x = 1; x <= shapeSize.xValue; x++) {
+    for (let x = 0; x < shapeSize.xValue; x++) {
         for (let y = 1; y <= shapeSize.yValue; y++) {
             for (let z = 1; z <= shapeSize.zValue; z++) {
                 const geometry = generateRandomGeometry();
@@ -130,7 +130,7 @@ function generateShape() {
                 const material = new THREE.MeshBasicMaterial({ map });
                 const mesh = new THREE.Mesh(geometry, material);
                 
-                mesh.position.set((x - shapeSize.xValue / 2 - 0.5) * 1.2, (y - shapeSize.yValue / 2 - 0.5) * 1.2, (z - shapeSize.zValue / 2 - 0.5) * 1.2);
+                mesh.position.set((x - shapeSize.xValue / 2), (y - shapeSize.yValue / 2 - 0.5) * 1.2, (z - shapeSize.zValue / 2 - 0.5) * 1.2);
 
                 scene.add(mesh);
                 meshes.push(mesh);
